@@ -20,3 +20,6 @@ If you are developing a production application, we recommend using TypeScript wi
 HAROLD MORALES
 FABRICIO CANOVA
 ALONSO FUENTES
+
+
+link de Vercel: https://swamper-tcg-react.vercel.app/
