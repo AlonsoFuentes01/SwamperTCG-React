@@ -1,4 +1,3 @@
-// src/test/components/organisms/ProductFormModal.spec.jsx
 import { render, screen, fireEvent } from '@testing-library/react';
 import ProductFormModal from '../../../components/organisms/ProductFormModal';
 
@@ -14,21 +13,16 @@ const productoExistente = {
 };
 
 describe('ProductFormModal (organism)', () => {
-  // Prueba 1: sin producto, es el formulario de "Nuevo producto" y está vacío
   it('muestra "Nuevo producto" con los campos vacíos', () => {
     render(<ProductFormModal onClose={() => {}} onSave={() => {}} />);
-
     expect(screen.getByText('Nuevo producto')).toBeTruthy();
     expect(screen.getByText('Crear producto')).toBeTruthy();
     expect(screen.getByLabelText('Nombre').value).toBe('');
   });
-
-  // Prueba 2: con un producto, es "Editar producto" y los campos vienen llenos
   it('al editar, carga los datos del producto', () => {
     render(
       <ProductFormModal product={productoExistente} onClose={() => {}} onSave={() => {}} />
     );
-
     expect(screen.getByText('Editar producto')).toBeTruthy();
     expect(screen.getByText('Guardar cambios')).toBeTruthy();
     expect(screen.getByLabelText('Nombre').value).toBe('Darkrai');
@@ -36,13 +30,10 @@ describe('ProductFormModal (organism)', () => {
     expect(screen.getByLabelText('Estado').value).toBe('NM');
   });
 
-  // Prueba 3: si el formulario está vacío, NO guarda y muestra los errores
   it('no llama a onSave si el formulario es inválido', () => {
     const onSave = jasmine.createSpy('onSave');
     render(<ProductFormModal onClose={() => {}} onSave={onSave} />);
-
     fireEvent.click(screen.getByText('Crear producto'));
-
     expect(onSave).not.toHaveBeenCalled();
     expect(screen.getByText('El nombre es obligatorio.')).toBeTruthy();
   });
