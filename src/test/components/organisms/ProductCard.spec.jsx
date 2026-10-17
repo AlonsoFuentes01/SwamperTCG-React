@@ -1,3 +1,4 @@
+// src/test/components/organisms/ProductCard.spec.jsx
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import ProductCard from '../../../components/organisms/ProductCard';
@@ -9,6 +10,7 @@ const mockProduct = {
   price: 10000,
   image: 'test.jpg',
 };
+
 const renderCard = () =>
   render(
     <MemoryRouter initialEntries={['/']}>
@@ -18,7 +20,6 @@ const renderCard = () =>
       </Routes>
     </MemoryRouter>
   );
-
 describe('ProductCard (organism)', () => {
   it('muestra el nombre, la descripción y la imagen', () => {
     renderCard();
@@ -32,6 +33,7 @@ describe('ProductCard (organism)', () => {
     renderCard();
     expect(screen.getByText('$10.000')).toBeTruthy();
   });
+
   it('navega al detalle al hacer click en "Ver detalles"', () => {
     renderCard();
     fireEvent.click(screen.getByText('Ver detalles'));

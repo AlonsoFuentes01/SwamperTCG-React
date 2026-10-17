@@ -5,11 +5,9 @@ import Footer from '../../../components/organisms/Footer';
 describe('Footer (organism)', () => {
   it('muestra el nombre SwamperTCG', () => {
     render(<Footer />);
-
     expect(screen.getByRole('contentinfo')).toBeTruthy();
     expect(screen.getByText('SwamperTCG')).toBeTruthy();
   });
-
   it('tiene los enlaces a Instagram y TCGMatch en pestaña nueva', () => {
     const { container } = render(<Footer />);
     const links = within(container).getAllByRole('link');
@@ -21,7 +19,6 @@ describe('Footer (organism)', () => {
 
   it('muestra el año actual en el copyright', () => {
     render(<Footer />);
-
     const anio = new Date().getFullYear();
     expect(screen.getByText(`© ${anio} Todos los derechos reservados`)).toBeTruthy();
   });

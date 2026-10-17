@@ -107,9 +107,6 @@ function Carrito() {
         </Card>
 
         <div className="d-flex gap-2 justify-content-center mt-3 d-print-none">
-          <Button variant="outline-secondary" onClick={() => window.print()}>
-            Imprimir recibo
-          </Button>
           <Button as={Link} to="/products" variant="primary">
             Seguir comprando
           </Button>

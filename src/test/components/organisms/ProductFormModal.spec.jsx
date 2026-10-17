@@ -1,3 +1,4 @@
+// src/test/components/organisms/ProductFormModal.spec.jsx
 import { render, screen, fireEvent } from '@testing-library/react';
 import ProductFormModal from '../../../components/organisms/ProductFormModal';
 
@@ -19,10 +20,12 @@ describe('ProductFormModal (organism)', () => {
     expect(screen.getByText('Crear producto')).toBeTruthy();
     expect(screen.getByLabelText('Nombre').value).toBe('');
   });
+
   it('al editar, carga los datos del producto', () => {
     render(
       <ProductFormModal product={productoExistente} onClose={() => {}} onSave={() => {}} />
     );
+
     expect(screen.getByText('Editar producto')).toBeTruthy();
     expect(screen.getByText('Guardar cambios')).toBeTruthy();
     expect(screen.getByLabelText('Nombre').value).toBe('Darkrai');
