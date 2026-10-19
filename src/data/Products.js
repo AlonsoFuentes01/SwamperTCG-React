@@ -23,9 +23,10 @@ import oshawott from '/imagenes/cartas/oshawott.jpg';
 import salamence from '/imagenes/cartas/salamence.jpg';
 import spearow from '/imagenes/cartas/spearow.jpg';
 import spheal from '/imagenes/cartas/spheal.jpg';
-import alonso from '/imagenes/cartas/alonso.png'
-import rayen from '/imagenes/cartas/rayen.png'
-import colo from '/imagenes/cartas/colo.png'
+import alonso from '/imagenes/cartas/alonso.png';
+import rayen from '/imagenes/cartas/rayen.png';
+import colo from '/imagenes/cartas/colo.png';
+import alonsoprime from '/imagenes/cartas/alonsoprime.jpg';
 
 const products = [
   {
@@ -221,7 +222,7 @@ const products = [
     
     image: dewott
   },
-      {
+    {
     id: 20,
     name: 'Kanghaskan',
     description: 'Edición: SV: Scarlet & Violet - 151',
@@ -231,7 +232,7 @@ const products = [
     stock: 10,
     image: kang
   },
-      {
+    {
     id: 21,
     name: 'Professor Oak - 25th',
     description: 'Edición: Celebrations',
@@ -242,7 +243,7 @@ const products = [
     
     image: oak
   },
-      {
+    {
     id: 22,
     name: 'Oshawott - chill',
     description: 'Edición: SV: White FlareS',
@@ -253,7 +254,7 @@ const products = [
     
     image: oshawott
   },
-      {
+    {
     id: 23,
     name: 'Salamence - 30th',
     description: 'Edición: ME: 30th Celebration',
@@ -264,7 +265,7 @@ const products = [
     
     image: salamence
   },
-      {
+    {
     id: 24,
     name: 'Spearow',
     description: 'Edición: ME03: Perfect Order',
@@ -275,7 +276,7 @@ const products = [
     
     image: spearow
   },
-      {
+    {
     id: 25,
     name: 'Spheal',
     description: 'Edición: SV08: Surging SparksS',
@@ -286,7 +287,7 @@ const products = [
     
     image: spheal
   },
-      {
+    {
     id: 26,
     name: 'Alonso - Water',
     description: 'Edición: Water',
@@ -297,7 +298,7 @@ const products = [
     
     image: alonso
   },
-      {
+    {
     id: 27,
     name: 'Rayens Fire',
     description: 'Edición: Fire',
@@ -308,7 +309,7 @@ const products = [
     
     image: rayen
   },
-      {
+    {
     id: 28,
     name: 'Colo',
     description: 'Edición: ME10: Food',
@@ -318,6 +319,17 @@ const products = [
     stock: 10,
     
     image: colo
+  },
+    {
+    id: 29,
+    name: 'AlonsoPrime',
+    description: 'Edición: H',
+    price: 54990,
+    idioma: 'ingles',
+    estado: 'NM',
+    stock: 1,
+    
+    image: alonsoprime 
   },
 ];
 
